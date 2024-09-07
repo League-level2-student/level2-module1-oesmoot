@@ -46,7 +46,14 @@ public class GuestBook implements ActionListener {
 		// TODO Auto-generated method stub
 		JButton buttonClicked = (JButton)arg0.getSource();
 		if(buttonClicked == button1) {
-			names.add(JOptionPane.showInputDialog("please enter a neme"));
+			names.add(JOptionPane.showInputDialog("please enter a name"));
+		}
+		if(buttonClicked == button2) {
+			String guests = "";
+			for(int i = 0; i< names.size();i++) {
+				guests += "guest #" + (i+1) + ": " + names.get(i) + "\n";
+			}
+			JOptionPane.showMessageDialog(null, guests);
 		}
 		
 	}
